@@ -1,0 +1,112 @@
+<% if @bill_of_lading.errors.any? %>
+  <h3>The following errors prevented article from being created.</h3>
+    
+  <% @bill_of_lading.errors.full_messages.each do |msg| %>
+    <ul>
+      <li><%= msg %></li>
+    </ul>
+  <% end %>
+    
+<% end %>
+
+<%= form_for(@bill_of_lading, :html => { class: "form-horizontal", role: "form" }) do |f| %>
+
+  <div class="form-group">
+  
+    <div class ="control-label col-md-2">
+      <%= f.label :shipper %><br/>
+    </div>
+    
+    <div class="col-md-4">
+      <%= f.text_area :shipper, rows: 10, class: "form-control", placeholder: "Shipper Info" %>
+    </div>
+    
+    <div class ="control-label col-md-2">
+      <%= f.label :document_number %><br/>
+    </div>
+    
+    <div class="col-md-4">
+      <%= f.text_field :document_number, class: "form-control", placeholder: "Document Number", autofocus: true  %>
+    </div>
+    
+  </div>
+  
+  <div class="form-group">
+    
+    <div class ="control-label col-md-2">
+      <%= f.label :export_references %><br/>
+    </div>
+    
+    <div class="col-md-4">
+      <%= f.text_area :export_references, rows: 10, class: "form-control", placeholder: "Export References Info" %>
+    </div>
+    
+    <div class ="control-label col-md-2">
+      <%= f.label :consignee %><br/>
+    </div>
+    
+    <div class="col-md-4">
+      <%= f.text_area :consignee, rows: 10, class: "form-control", placeholder: "Consignee Info" %>
+    </div>
+  
+  </div>
+  
+  <div class="form-group">
+    
+    <div class ="control-label col-md-2">
+      <%= f.label :destination_agent %><br/>
+    </div>
+    
+    <div class="col-md-4">
+      <%= f.text_area :destination_agent, rows: 10, class: "form-control", placeholder: "Destination Agent Info" %>
+    </div>
+    
+    <div class ="control-label col-md-2">
+      <%= f.label :notify_party %><br/>
+    </div>
+    
+    <div class="col-md-4">
+      <%= f.text_area :notify_party, rows: 10, class: "form-control", placeholder: "Notify Party Info" %>
+    </div>
+    
+  </div>
+  
+  <div class="form-group">
+    
+    <div class ="control-label col-md-2">
+      <%= f.label :export_instructions %><br/>
+    </div>
+    
+    <div class="col-md-4">
+      <%= f.text_area :export_instructions, rows: 10, class: "form-control", placeholder: "Enter Export Instructions" %>
+    </div>
+    
+    <div class ="control-label col-md-2">
+      <%= f.label :place_of_receipt %><br/>
+    </div>
+    
+    <div class="col-md-4">
+      <%= f.text_field :place_of_receipt, class: "form-control", placeholder: "Enter Place of Receipt" %>
+    </div>
+    
+    <div style="margin: 50px 0;">
+    <div class ="control-label col-md-2">
+      <%= f.label :ocean_carrier %><br/>
+    </div>
+    
+    <div class="col-md-4">
+      <%= f.text_field :ocean_carrier, class: "form-control", placeholder: "Enter Ocean Carrier" %>
+    </div>
+    </div>
+    
+  </div>
+  
+  <div class="form-group">
+        
+    <div class="col-md-offset-2 col-md-2">
+      <%= f.submit(style: "border-radius: 20px;", class: "btn btn-primary") %>
+    </div>
+        
+  </div>
+  
+<% end %>
