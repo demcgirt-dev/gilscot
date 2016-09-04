@@ -1,0 +1,65 @@
+<div style="margin: 20px 0;" class="container">
+  <div class="row">
+    <h1 style="text-align: center; margin: 50px 0">GILSCOT-GUIDROZ INTERNATIONAL</h1>
+    
+    <h3 style="text-align: left; margin: 50px 0">Document Number: <%= "#{@bill_of_lading.document_number}" %></h3>
+    
+    <div style="border-bottom: 1px dotted #000000;" class="col-md-12">
+      <div class="col-md-6">
+        <h6 style="font-weight: bold;">Shipper Details:</h6>
+        <p><%= @bill_of_lading.shipper %></p>
+      </div>
+      
+      <div class="col-md-6">
+        <h6 style="font-weight: bold;">Doc No:</h6>
+        <p><%= @bill_of_lading.document_number %></p>
+      </div>
+    </div>
+    
+    <div style="border-bottom: 1px dotted #000000;" class="col-md-12">
+      <div class="col-md-6">
+        <h6 style="font-weight: bold;">Export References:</h6>
+        <p><%= @bill_of_lading.export_references %></p>
+      </div>
+      
+      <div class="col-md-6">
+        <h6 style="font-weight: bold;">Consignee:</h6>
+        <p><%= @bill_of_lading.consignee %></p>
+      </div>
+    </div>
+    
+    <div style="border-bottom: 1px dotted #000000;" class="col-md-12">
+      <div class="col-md-6">
+        <h6 style="font-weight: bold;">Desination Agent:</h6>
+        <p><%= @bill_of_lading.destination_agent %></p>
+      </div>
+      
+      <div class="col-md-6">
+        <h6 style="font-weight: bold;">Notify Party:</h6>
+        <p><%= @bill_of_lading.notify_party %></p>
+      </div>
+    </div>
+    
+    <div class="col-md-12">
+      <div class="col-md-6">
+        <h6 style="font-weight: bold;">Export Instructions:</h6>
+        <p><%= @bill_of_lading.export_instructions %></p>
+      </div>
+      
+      <div class="col-md-3">
+        <h6 style="font-weight: bold;">Place of Receipt:</h6>
+        <p><%= @bill_of_lading.place_of_receipt %></p>
+      </div>
+      
+       <div class="col-md-3">
+         <h6 style="font-weight: bold;">Ocean Carrier:</h6>
+        <p><%= @bill_of_lading.ocean_carrier %></p>
+      </div>
+    </div>
+        
+    <div class="col-md-offset-4 col-md-3">
+      <%= link_to "[ View B/L List ]", bill_of_ladings_path %>
+    </div>
+      
+  </div>
+</div>

@@ -39,7 +39,7 @@ class BillOfLadingsController < ApplicationController
   
   def destroy
     @bill_of_lading.destroy
-    flash[:notice] = "Bill of lading has been deleted"
+    flash[:danger] = "Bill of lading has been deleted"
     redirect_to bill_of_ladings_path
   end
 

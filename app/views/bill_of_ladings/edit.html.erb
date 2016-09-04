@@ -1,0 +1,17 @@
+<div style="margin: 20px 0;" class="container">
+  <div class="row">
+    <h1 style="text-align: center; margin: 50px 0">GILSCOT-GUIDROZ INTERNATIONAL</h1>
+    
+    <h3 style="text-align: left; margin: 50px 0">Edit Document No: <%= "#{@bill_of_lading.document_number}" %></h3>
+    
+    <div class="col-md-12">
+    
+      <%= render 'form' %>
+      
+      <div class="col-md-offset-4 col-md-3">
+        <%= link_to "[ View B/L List ]", bill_of_ladings_path %>
+      </div>
+      
+    </div>
+  </div>
+</div>

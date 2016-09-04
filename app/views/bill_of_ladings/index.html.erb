@@ -1,0 +1,21 @@
+<div style="margin: 20px 0;" class="container">
+  <div class="row">
+    
+    <h1 style="text-align: center; margin: 50px 0">GILSCOT-GUIDROZ INTERNATIONAL</h1>
+    <h3><%= link_to "Create new B/L", new_bill_of_lading_path %></h3>
+    
+    <div class="col-md-12">
+      <table width="100%">
+        <tr>
+          <th>Document No:</th>
+          <th>Created at</th>
+          <th>Updated at</th>
+        </tr>
+    
+        <%= render 'bill_of_lading', obj: @bill_of_ladings %>
+      
+      </table>
+    </div>
+    
+  </div>
+</div>

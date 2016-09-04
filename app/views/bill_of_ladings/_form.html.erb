@@ -1,13 +1,4 @@
-<% if @bill_of_lading.errors.any? %>
-  <h3>The following errors prevented article from being created.</h3>
-    
-  <% @bill_of_lading.errors.full_messages.each do |msg| %>
-    <ul>
-      <li><%= msg %></li>
-    </ul>
-  <% end %>
-    
-<% end %>
+<%= render 'shared/errors', obj: @bill_of_lading%>
 
 <%= form_for(@bill_of_lading, :html => { class: "form-horizontal", role: "form" }) do |f| %>
 
